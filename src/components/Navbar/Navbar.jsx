@@ -1,13 +1,14 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
+import { ROUTES } from '../../utils/routes';
 
 function Navbar() {
   return (
     <header>
-<a>HOME</a>
-<a>ABOUT</a>
-<a>CONTACTS</a>
+      <NavLink to={ROUTES.root()}>HOME</NavLink>
+      <NavLink to={ROUTES.about()}>ABOUT</NavLink>
+      <NavLink to={ROUTES.contacts()}>CONTACTS</NavLink>
     </header>
   )
 }
