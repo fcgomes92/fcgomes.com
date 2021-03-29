@@ -3,7 +3,28 @@ backend:
   branch: main
 media_folder: public/img
 public_folder: img
+i18n:
+  structure: multiple_folders
+  locales: [en, de, fr]
+
 collections:
+  - name: posts
+    label: Posts
+    folder: content/posts
+    create: true
+    i18n: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        i18n: true
+      - label: Date
+        name: date
+        widget: datetime
+        i18n: duplicate
+      - label: Body
+        name: body
+        widget: markdown
   - name: "pages"
     label: "Pages"
     files:

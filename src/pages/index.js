@@ -1,10 +1,16 @@
+import matter from "gray-matter";
 import Head from "next/head";
 import { Component } from "react";
-import { attributes, react as HomeContent } from "../content/home.md";
+import ReactMarkdown from "react-markdown";
+import HomeContent from "../../content/home.md";
+import Link from "next/link";
 
 export default class Home extends Component {
   render() {
-    let { title, cats } = attributes;
+    const {
+      content,
+      data: { title, description, cats },
+    } = matter(HomeContent);
     return (
       <>
         <Head>
@@ -12,7 +18,7 @@ export default class Home extends Component {
         </Head>
         <article>
           <h1>{title}</h1>
-          <HomeContent />
+          <ReactMarkdown escapeHtml={true} source={content} />
           <ul>
             {cats.map((cat, k) => (
               <li key={k}>
@@ -21,6 +27,9 @@ export default class Home extends Component {
               </li>
             ))}
           </ul>
+          <Link href={`/posts/en/foo`}>foo</Link>
+          <br />
+          <Link href={`/posts/en/bar`}>bar</Link>
         </article>
       </>
     );
