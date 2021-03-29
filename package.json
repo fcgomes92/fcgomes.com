@@ -1,0 +1,33 @@
+{
+  "name": "fcgomes.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "next": "^10.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.13",
+    "@babel/preset-react": "^7.13.13",
+    "frontmatter-markdown-loader": "^3.6.2"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcgomes92/fcgomes.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fcgomes92/fcgomes.com/issues"
+  },
+  "homepage": "https://github.com/fcgomes92/fcgomes.com#readme"
+}
