@@ -30,6 +30,8 @@ export default class Home extends Component {
           <Link href={`/posts/en/foo`}>foo</Link>
           <br />
           <Link href={`/posts/en/bar`}>bar</Link>
+          <br />
+          <Link href={`/posts/en/post-from-cms`}>new-post</Link>
         </article>
       </>
     );

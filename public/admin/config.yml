@@ -14,6 +14,10 @@ collections:
     create: true
     i18n: true
     fields:
+      - label: Name
+        name: name
+        widget: string
+        i18n: duplicate
       - label: Title
         name: title
         widget: string
